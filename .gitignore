@@ -1,0 +1,23 @@
+Carthage/
+
+## Build generated
+build/
+DerivedData/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.cer
+*.mobileprovision
+xcuserdata
+*.xcuserstate
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# OS X
+.DS_Store

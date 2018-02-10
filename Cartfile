@@ -1,0 +1,5 @@
+github "realm/realm-cocoa"
+github "amplitude/Amplitude-iOS"
+github "Alamofire/Alamofire" ~> 4.5
+github "ashleymills/Reachability.swift"
+github "SwiftyJSON/SwiftyJSON"
