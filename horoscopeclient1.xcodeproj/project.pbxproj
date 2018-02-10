@@ -25,6 +25,39 @@
 		C5B94222202E7279000756B0 /* LinkParaDev.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B94215202E7278000756B0 /* LinkParaDev.m */; };
 		C5B94223202E7279000756B0 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */; };
 		C5B94224202E7279000756B0 /* CYWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B9421A202E7278000756B0 /* CYWebHandler.m */; };
+		C5B9422B202E7431000756B0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94225202E7430000756B0 /* SwiftyJSON.framework */; };
+		C5B9422C202E7431000756B0 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94225202E7430000756B0 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5B9422D202E7431000756B0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94226202E7430000756B0 /* Realm.framework */; };
+		C5B9422E202E7431000756B0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94226202E7430000756B0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5B9422F202E7431000756B0 /* Amplitude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94227202E7430000756B0 /* Amplitude.framework */; };
+		C5B94230202E7431000756B0 /* Amplitude.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94227202E7430000756B0 /* Amplitude.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5B94231202E7431000756B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94228202E7431000756B0 /* Alamofire.framework */; };
+		C5B94232202E7431000756B0 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94228202E7431000756B0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5B94233202E7431000756B0 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94229202E7431000756B0 /* Reachability.framework */; };
+		C5B94234202E7431000756B0 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5B94229202E7431000756B0 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5B94235202E7431000756B0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B9422A202E7431000756B0 /* RealmSwift.framework */; };
+		C5B94236202E7431000756B0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5B9422A202E7431000756B0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5B94241202E770C000756B0 /* UICollectionView+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9423D202E770C000756B0 /* UICollectionView+IndexPath.swift */; };
+		C5B94242202E770C000756B0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9423E202E770C000756B0 /* UIColor.swift */; };
+		C5B94243202E770D000756B0 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9423F202E770C000756B0 /* URL.swift */; };
+		C5B94244202E770D000756B0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94240202E770C000756B0 /* UIImageView.swift */; };
+		C5B9424B202E7719000756B0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94245202E7719000756B0 /* BaseViewController.swift */; };
+		C5B9424C202E7719000756B0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94246202E7719000756B0 /* WebViewController.swift */; };
+		C5B9424D202E7719000756B0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94247202E7719000756B0 /* BaseNavigationController.swift */; };
+		C5B9424E202E7719000756B0 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94248202E7719000756B0 /* BaseTabBarController.swift */; };
+		C5B9424F202E7719000756B0 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94249202E7719000756B0 /* BaseCollectionViewCell.swift */; };
+		C5B94250202E7719000756B0 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9424A202E7719000756B0 /* BaseTableViewCell.swift */; };
+		C5B9425D202E7931000756B0 /* ContainerViewOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94252202E7930000756B0 /* ContainerViewOneController.swift */; };
+		C5B9425E202E7931000756B0 /* Constellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94253202E7931000756B0 /* Constellation.swift */; };
+		C5B9425F202E7931000756B0 /* Constellations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B94254202E7931000756B0 /* Constellations.xcassets */; };
+		C5B94260202E7931000756B0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94255202E7931000756B0 /* DetailsViewController.swift */; };
+		C5B94261202E7931000756B0 /* ConstellationDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B94256202E7931000756B0 /* ConstellationDetailsCell.xib */; };
+		C5B94262202E7931000756B0 /* ConstellationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94257202E7931000756B0 /* ConstellationDetailsCell.swift */; };
+		C5B94263202E7931000756B0 /* ContainerViewTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94258202E7931000756B0 /* ContainerViewTwoController.swift */; };
+		C5B94264202E7931000756B0 /* ConstellationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94259202E7931000756B0 /* ConstellationCell.swift */; };
+		C5B94265202E7931000756B0 /* Constellations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B9425A202E7931000756B0 /* Constellations.storyboard */; };
+		C5B94266202E7931000756B0 /* ConstellationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9425B202E7931000756B0 /* ConstellationsViewController.swift */; };
+		C5B94267202E7931000756B0 /* ContainerViewThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9425C202E7931000756B0 /* ContainerViewThreeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +76,25 @@
 			remoteInfo = horoscopeclient1;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5B94237202E7431000756B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C5B9422E202E7431000756B0 /* Realm.framework in Embed Frameworks */,
+				C5B9422C202E7431000756B0 /* SwiftyJSON.framework in Embed Frameworks */,
+				C5B94236202E7431000756B0 /* RealmSwift.framework in Embed Frameworks */,
+				C5B94234202E7431000756B0 /* Reachability.framework in Embed Frameworks */,
+				C5B94230202E7431000756B0 /* Amplitude.framework in Embed Frameworks */,
+				C5B94232202E7431000756B0 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C5B941D4202E6B9F000756B0 /* horoscopeclient1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = horoscopeclient1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +126,35 @@
 		C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		C5B94219202E7278000756B0 /* CYWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYWebHandler.h; sourceTree = "<group>"; };
 		C5B9421A202E7278000756B0 /* CYWebHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYWebHandler.m; sourceTree = "<group>"; };
+		C5B94225202E7430000756B0 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		C5B94226202E7430000756B0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		C5B94227202E7430000756B0 /* Amplitude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Amplitude.framework; path = Carthage/Build/iOS/Amplitude.framework; sourceTree = "<group>"; };
+		C5B94228202E7431000756B0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		C5B94229202E7431000756B0 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		C5B9422A202E7431000756B0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		C5B94239202E75A9000756B0 /* horoscopeclient1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "horoscopeclient1-Bridging-Header.h"; sourceTree = "<group>"; };
+		C5B9423A202E7666000756B0 /* horoscopeclient1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = horoscopeclient1.entitlements; sourceTree = "<group>"; };
+		C5B9423D202E770C000756B0 /* UICollectionView+IndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+IndexPath.swift"; sourceTree = "<group>"; };
+		C5B9423E202E770C000756B0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C5B9423F202E770C000756B0 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		C5B94240202E770C000756B0 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		C5B94245202E7719000756B0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C5B94246202E7719000756B0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C5B94247202E7719000756B0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		C5B94248202E7719000756B0 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		C5B94249202E7719000756B0 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5B9424A202E7719000756B0 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		C5B94252202E7930000756B0 /* ContainerViewOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewOneController.swift; sourceTree = "<group>"; };
+		C5B94253202E7931000756B0 /* Constellation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constellation.swift; sourceTree = "<group>"; };
+		C5B94254202E7931000756B0 /* Constellations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Constellations.xcassets; sourceTree = "<group>"; };
+		C5B94255202E7931000756B0 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C5B94256202E7931000756B0 /* ConstellationDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConstellationDetailsCell.xib; sourceTree = "<group>"; };
+		C5B94257202E7931000756B0 /* ConstellationDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstellationDetailsCell.swift; sourceTree = "<group>"; };
+		C5B94258202E7931000756B0 /* ContainerViewTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewTwoController.swift; sourceTree = "<group>"; };
+		C5B94259202E7931000756B0 /* ConstellationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstellationCell.swift; sourceTree = "<group>"; };
+		C5B9425A202E7931000756B0 /* Constellations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Constellations.storyboard; sourceTree = "<group>"; };
+		C5B9425B202E7931000756B0 /* ConstellationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstellationsViewController.swift; sourceTree = "<group>"; };
+		C5B9425C202E7931000756B0 /* ContainerViewThreeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewThreeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +162,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B9422D202E7431000756B0 /* Realm.framework in Frameworks */,
+				C5B9422B202E7431000756B0 /* SwiftyJSON.framework in Frameworks */,
+				C5B94235202E7431000756B0 /* RealmSwift.framework in Frameworks */,
+				C5B94233202E7431000756B0 /* Reachability.framework in Frameworks */,
+				C5B9422F202E7431000756B0 /* Amplitude.framework in Frameworks */,
+				C5B94231202E7431000756B0 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +191,14 @@
 		C5B941CB202E6B9F000756B0 = {
 			isa = PBXGroup;
 			children = (
+				C5B94228202E7431000756B0 /* Alamofire.framework */,
+				C5B94227202E7430000756B0 /* Amplitude.framework */,
+				C5B94229202E7431000756B0 /* Reachability.framework */,
+				C5B94226202E7430000756B0 /* Realm.framework */,
+				C5B9422A202E7431000756B0 /* RealmSwift.framework */,
+				C5B94225202E7430000756B0 /* SwiftyJSON.framework */,
 				C5B94205202E6BB3000756B0 /* Cartfile */,
+				C5B94239202E75A9000756B0 /* horoscopeclient1-Bridging-Header.h */,
 				C5B94207202E7278000756B0 /* Configs */,
 				C5B9420B202E7278000756B0 /* Lib */,
 				C5B9420E202E7278000756B0 /* Vendor */,
@@ -128,12 +222,9 @@
 		C5B941D6202E6B9F000756B0 /* horoscopeclient1 */ = {
 			isa = PBXGroup;
 			children = (
-				C5B941D7202E6B9F000756B0 /* AppDelegate.swift */,
-				C5B941D9202E6B9F000756B0 /* ViewController.swift */,
-				C5B941DB202E6B9F000756B0 /* Main.storyboard */,
-				C5B941DE202E6B9F000756B0 /* Assets.xcassets */,
-				C5B941E0202E6B9F000756B0 /* LaunchScreen.storyboard */,
-				C5B941E3202E6B9F000756B0 /* Info.plist */,
+				C5B94251202E78F7000756B0 /* Constellations */,
+				C5B9423B202E76D2000756B0 /* App */,
+				C5B9423A202E7666000756B0 /* horoscopeclient1.entitlements */,
 			);
 			path = horoscopeclient1;
 			sourceTree = "<group>";
@@ -208,6 +299,55 @@
 			path = WebHandler;
 			sourceTree = "<group>";
 		};
+		C5B9423B202E76D2000756B0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C5B941E3202E6B9F000756B0 /* Info.plist */,
+				C5B941D7202E6B9F000756B0 /* AppDelegate.swift */,
+				C5B94249202E7719000756B0 /* BaseCollectionViewCell.swift */,
+				C5B94247202E7719000756B0 /* BaseNavigationController.swift */,
+				C5B94248202E7719000756B0 /* BaseTabBarController.swift */,
+				C5B9424A202E7719000756B0 /* BaseTableViewCell.swift */,
+				C5B94245202E7719000756B0 /* BaseViewController.swift */,
+				C5B941D9202E6B9F000756B0 /* ViewController.swift */,
+				C5B94246202E7719000756B0 /* WebViewController.swift */,
+				C5B941DE202E6B9F000756B0 /* Assets.xcassets */,
+				C5B9423C202E770C000756B0 /* Helpers */,
+				C5B941E0202E6B9F000756B0 /* LaunchScreen.storyboard */,
+				C5B941DB202E6B9F000756B0 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C5B9423C202E770C000756B0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C5B9423D202E770C000756B0 /* UICollectionView+IndexPath.swift */,
+				C5B9423E202E770C000756B0 /* UIColor.swift */,
+				C5B9423F202E770C000756B0 /* URL.swift */,
+				C5B94240202E770C000756B0 /* UIImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C5B94251202E78F7000756B0 /* Constellations */ = {
+			isa = PBXGroup;
+			children = (
+				C5B94253202E7931000756B0 /* Constellation.swift */,
+				C5B94259202E7931000756B0 /* ConstellationCell.swift */,
+				C5B94257202E7931000756B0 /* ConstellationDetailsCell.swift */,
+				C5B94256202E7931000756B0 /* ConstellationDetailsCell.xib */,
+				C5B9425A202E7931000756B0 /* Constellations.storyboard */,
+				C5B94254202E7931000756B0 /* Constellations.xcassets */,
+				C5B9425B202E7931000756B0 /* ConstellationsViewController.swift */,
+				C5B94252202E7930000756B0 /* ContainerViewOneController.swift */,
+				C5B9425C202E7931000756B0 /* ContainerViewThreeController.swift */,
+				C5B94258202E7931000756B0 /* ContainerViewTwoController.swift */,
+				C5B94255202E7931000756B0 /* DetailsViewController.swift */,
+			);
+			path = Constellations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +358,8 @@
 				C5B941D0202E6B9F000756B0 /* Sources */,
 				C5B941D1202E6B9F000756B0 /* Frameworks */,
 				C5B941D2202E6B9F000756B0 /* Resources */,
+				C5B94237202E7431000756B0 /* Embed Frameworks */,
+				C5B94238202E7546000756B0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -277,6 +419,17 @@
 					C5B941D3202E6B9F000756B0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C5B941E7202E6B9F000756B0 = {
 						CreatedOnToolsVersion = 9.2;
@@ -315,8 +468,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B94261202E7931000756B0 /* ConstellationDetailsCell.xib in Resources */,
 				C5B941E2202E6B9F000756B0 /* LaunchScreen.storyboard in Resources */,
 				C5B941DF202E6B9F000756B0 /* Assets.xcassets in Resources */,
+				C5B9425F202E7931000756B0 /* Constellations.xcassets in Resources */,
+				C5B94265202E7931000756B0 /* Constellations.storyboard in Resources */,
 				C5B94206202E6BB4000756B0 /* Cartfile in Resources */,
 				C5B941DD202E6B9F000756B0 /* Main.storyboard in Resources */,
 			);
@@ -338,23 +494,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C5B94238202E7546000756B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Amplitude.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C5B941D0202E6B9F000756B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */,
+				C5B9424C202E7719000756B0 /* WebViewController.swift in Sources */,
+				C5B94263202E7931000756B0 /* ContainerViewTwoController.swift in Sources */,
+				C5B94242202E770C000756B0 /* UIColor.swift in Sources */,
 				C5B9421F202E7279000756B0 /* WebServicesManager.swift in Sources */,
+				C5B94267202E7931000756B0 /* ContainerViewThreeController.swift in Sources */,
 				C5B9421C202E7279000756B0 /* Configs.swift in Sources */,
+				C5B9425E202E7931000756B0 /* Constellation.swift in Sources */,
+				C5B94266202E7931000756B0 /* ConstellationsViewController.swift in Sources */,
 				C5B941D8202E6B9F000756B0 /* AppDelegate.swift in Sources */,
+				C5B9424D202E7719000756B0 /* BaseNavigationController.swift in Sources */,
+				C5B9425D202E7931000756B0 /* ContainerViewOneController.swift in Sources */,
+				C5B94243202E770D000756B0 /* URL.swift in Sources */,
+				C5B9424F202E7719000756B0 /* BaseCollectionViewCell.swift in Sources */,
 				C5B9421D202E7279000756B0 /* Color.swift in Sources */,
+				C5B94262202E7931000756B0 /* ConstellationDetailsCell.swift in Sources */,
+				C5B9424B202E7719000756B0 /* BaseViewController.swift in Sources */,
 				C5B94222202E7279000756B0 /* LinkParaDev.m in Sources */,
+				C5B94244202E770D000756B0 /* UIImageView.swift in Sources */,
+				C5B9424E202E7719000756B0 /* BaseTabBarController.swift in Sources */,
 				C5B9421B202E7279000756B0 /* Constants.swift in Sources */,
 				C5B94221202E7279000756B0 /* AppDataSocketConnector.m in Sources */,
+				C5B94250202E7719000756B0 /* BaseTableViewCell.swift in Sources */,
+				C5B94260202E7931000756B0 /* DetailsViewController.swift in Sources */,
 				C5B9421E202E7279000756B0 /* RealmManager.swift in Sources */,
 				C5B94224202E7279000756B0 /* CYWebHandler.m in Sources */,
 				C5B94220202E7279000756B0 /* LinkPara.m in Sources */,
+				C5B94264202E7931000756B0 /* ConstellationCell.swift in Sources */,
 				C5B94223202E7279000756B0 /* KeychainPasswordItem.swift in Sources */,
+				C5B94241202E770C000756B0 /* UICollectionView+IndexPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,12 +716,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = horoscopeclient1/horoscopeclient1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P35AQV2SNV;
-				INFOPLIST_FILE = horoscopeclient1/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/horoscopeclient1/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.horoscopeclient1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odinternational.horoscopeclient1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "horoscopeclient1-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -535,12 +737,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = horoscopeclient1/horoscopeclient1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P35AQV2SNV;
-				INFOPLIST_FILE = horoscopeclient1/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/horoscopeclient1/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.horoscopeclient1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odinternational.horoscopeclient1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "horoscopeclient1-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
