@@ -15,6 +15,16 @@
 		C5B941ED202E6B9F000756B0 /* horoscopeclient1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941EC202E6B9F000756B0 /* horoscopeclient1Tests.swift */; };
 		C5B941F8202E6B9F000756B0 /* horoscopeclient1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941F7202E6B9F000756B0 /* horoscopeclient1UITests.swift */; };
 		C5B94206202E6BB4000756B0 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = C5B94205202E6BB3000756B0 /* Cartfile */; };
+		C5B9421B202E7279000756B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94208202E7278000756B0 /* Constants.swift */; };
+		C5B9421C202E7279000756B0 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94209202E7278000756B0 /* Configs.swift */; };
+		C5B9421D202E7279000756B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9420A202E7278000756B0 /* Color.swift */; };
+		C5B9421E202E7279000756B0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9420C202E7278000756B0 /* RealmManager.swift */; };
+		C5B9421F202E7279000756B0 /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B9420D202E7278000756B0 /* WebServicesManager.swift */; };
+		C5B94220202E7279000756B0 /* LinkPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B94210202E7278000756B0 /* LinkPara.m */; };
+		C5B94221202E7279000756B0 /* AppDataSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B94212202E7278000756B0 /* AppDataSocketConnector.m */; };
+		C5B94222202E7279000756B0 /* LinkParaDev.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B94215202E7278000756B0 /* LinkParaDev.m */; };
+		C5B94223202E7279000756B0 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */; };
+		C5B94224202E7279000756B0 /* CYWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B9421A202E7278000756B0 /* CYWebHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,21 @@
 		C5B941F7202E6B9F000756B0 /* horoscopeclient1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = horoscopeclient1UITests.swift; sourceTree = "<group>"; };
 		C5B941F9202E6B9F000756B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B94205202E6BB3000756B0 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		C5B94208202E7278000756B0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5B94209202E7278000756B0 /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		C5B9420A202E7278000756B0 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C5B9420C202E7278000756B0 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		C5B9420D202E7278000756B0 /* WebServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
+		C5B94210202E7278000756B0 /* LinkPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkPara.m; sourceTree = "<group>"; };
+		C5B94211202E7278000756B0 /* LinkParaDev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkParaDev.h; sourceTree = "<group>"; };
+		C5B94212202E7278000756B0 /* AppDataSocketConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDataSocketConnector.m; sourceTree = "<group>"; };
+		C5B94213202E7278000756B0 /* LinkPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkPara.h; sourceTree = "<group>"; };
+		C5B94214202E7278000756B0 /* AppDataSocketDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDataSocketDelegate.h; sourceTree = "<group>"; };
+		C5B94215202E7278000756B0 /* LinkParaDev.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkParaDev.m; sourceTree = "<group>"; };
+		C5B94216202E7278000756B0 /* AppDataSocketConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDataSocketConnector.h; sourceTree = "<group>"; };
+		C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		C5B94219202E7278000756B0 /* CYWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYWebHandler.h; sourceTree = "<group>"; };
+		C5B9421A202E7278000756B0 /* CYWebHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYWebHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				C5B94205202E6BB3000756B0 /* Cartfile */,
+				C5B94207202E7278000756B0 /* Configs */,
+				C5B9420B202E7278000756B0 /* Lib */,
+				C5B9420E202E7278000756B0 /* Vendor */,
 				C5B941D6202E6B9F000756B0 /* horoscopeclient1 */,
 				C5B941EB202E6B9F000756B0 /* horoscopeclient1Tests */,
 				C5B941F6202E6B9F000756B0 /* horoscopeclient1UITests */,
@@ -126,6 +154,58 @@
 				C5B941F9202E6B9F000756B0 /* Info.plist */,
 			);
 			path = horoscopeclient1UITests;
+			sourceTree = "<group>";
+		};
+		C5B94207202E7278000756B0 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				C5B94208202E7278000756B0 /* Constants.swift */,
+				C5B94209202E7278000756B0 /* Configs.swift */,
+				C5B9420A202E7278000756B0 /* Color.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		C5B9420B202E7278000756B0 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				C5B9420C202E7278000756B0 /* RealmManager.swift */,
+				C5B9420D202E7278000756B0 /* WebServicesManager.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		C5B9420E202E7278000756B0 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C5B9420F202E7278000756B0 /* WebSocket */,
+				C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */,
+				C5B94218202E7278000756B0 /* WebHandler */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		C5B9420F202E7278000756B0 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C5B94210202E7278000756B0 /* LinkPara.m */,
+				C5B94211202E7278000756B0 /* LinkParaDev.h */,
+				C5B94212202E7278000756B0 /* AppDataSocketConnector.m */,
+				C5B94213202E7278000756B0 /* LinkPara.h */,
+				C5B94214202E7278000756B0 /* AppDataSocketDelegate.h */,
+				C5B94215202E7278000756B0 /* LinkParaDev.m */,
+				C5B94216202E7278000756B0 /* AppDataSocketConnector.h */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		C5B94218202E7278000756B0 /* WebHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C5B94219202E7278000756B0 /* CYWebHandler.h */,
+				C5B9421A202E7278000756B0 /* CYWebHandler.m */,
+			);
+			path = WebHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +344,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */,
+				C5B9421F202E7279000756B0 /* WebServicesManager.swift in Sources */,
+				C5B9421C202E7279000756B0 /* Configs.swift in Sources */,
 				C5B941D8202E6B9F000756B0 /* AppDelegate.swift in Sources */,
+				C5B9421D202E7279000756B0 /* Color.swift in Sources */,
+				C5B94222202E7279000756B0 /* LinkParaDev.m in Sources */,
+				C5B9421B202E7279000756B0 /* Constants.swift in Sources */,
+				C5B94221202E7279000756B0 /* AppDataSocketConnector.m in Sources */,
+				C5B9421E202E7279000756B0 /* RealmManager.swift in Sources */,
+				C5B94224202E7279000756B0 /* CYWebHandler.m in Sources */,
+				C5B94220202E7279000756B0 /* LinkPara.m in Sources */,
+				C5B94223202E7279000756B0 /* KeychainPasswordItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
