@@ -33,6 +33,18 @@ class ConstellationsViewController: BaseViewController, UICollectionViewDelegate
     static let storyboard_id = String(describing: ConstellationsViewController.self)
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    // MARK: - UINavigationBar
+    
+    private func setupUINavigationBar() {
+        if let navigationController = self.navigationController as? BaseNavigationController {
+            navigationController.navigationBar.barStyle = .black
+            navigationController.navigationBar.isTranslucent = false
+            navigationController.navigationBar.barTintColor = Color.specialYellow
+            navigationController.navigationBar.backgroundColor = Color.clear
+            navigationController.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "bg"), for: UIBarMetrics.default)
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -43,6 +55,11 @@ class ConstellationsViewController: BaseViewController, UICollectionViewDelegate
         self.setupUICollectionViewDataSource()
         self.setupUICollectionViewDelegateFlowLayout()
         // initial actions
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.setupUINavigationBar()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

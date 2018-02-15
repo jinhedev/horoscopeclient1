@@ -11,11 +11,11 @@ import UIKit
 class BaseNavigationController: UINavigationController {
 
     private func setupNavigationBar() {
-        self.navigationBar.barStyle = .black
-        self.navigationBar.isTranslucent = false
-        self.navigationBar.barTintColor = Color.specialYellow
-        self.navigationBar.backgroundColor = Color.clear
-        self.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "bg"), for: UIBarMetrics.default)
+//        self.navigationBar.barStyle = .black
+//        self.navigationBar.isTranslucent = false
+//        self.navigationBar.barTintColor = Color.specialYellow
+//        self.navigationBar.backgroundColor = Color.clear
+//        self.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "bg"), for: UIBarMetrics.default)
     }
 
     // MARK: - Lifecycle
