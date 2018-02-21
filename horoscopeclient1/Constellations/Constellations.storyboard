@@ -253,11 +253,11 @@
             </objects>
             <point key="canvasLocation" x="1605.5999999999999" y="161.46926536731635"/>
         </scene>
-        <!--Constellations-->
+        <!--星座-->
         <scene sceneID="kkE-IH-d5i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vxQ-Fc-Qe0" customClass="BaseNavigationController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Constellations" id="OEa-0x-9ox"/>
+                    <tabBarItem key="tabBarItem" title="星座" image="StarTab" landscapeImage="StarTab" largeContentSizeImage="StarTab" id="OEa-0x-9ox"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gms-Gz-pIU">
@@ -366,6 +366,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="StarTab" width="25" height="25"/>
         <image name="shareButton" width="21" height="17"/>
     </resources>
 </document>

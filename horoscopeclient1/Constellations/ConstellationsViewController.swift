@@ -54,7 +54,6 @@ class ConstellationsViewController: BaseViewController, UICollectionViewDelegate
         self.setupUICollectionViewDelegate()
         self.setupUICollectionViewDataSource()
         self.setupUICollectionViewDelegateFlowLayout()
-        // initial actions
     }
     
     override func viewDidAppear(_ animated: Bool) {

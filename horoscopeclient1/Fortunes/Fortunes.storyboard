@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN1-Az-1qA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift" translatesAutoresizingMaskIntoConstraints="NO" id="fpH-yt-V2f">
                                         <rect key="frame" x="295" y="16" width="64" height="64"/>
@@ -119,12 +119,13 @@
             </objects>
             <point key="canvasLocation" x="623.20000000000005" y="149.77511244377811"/>
         </scene>
-        <!--Fortunes-->
+        <!--今日奖品-->
         <scene sceneID="3DZ-IQ-LNl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KAJ-3b-xfD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fortunes" id="wro-ie-j92"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KAJ-3b-xfD" customClass="BaseNavigationController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="今日奖品" image="GiftTab" landscapeImage="GiftTab" largeContentSizeImage="GiftTab" id="Lpe-Cm-xTB"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RvB-Li-bpR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GiftTab" width="25" height="25"/>
         <image name="gift" width="505" height="505"/>
     </resources>
 </document>

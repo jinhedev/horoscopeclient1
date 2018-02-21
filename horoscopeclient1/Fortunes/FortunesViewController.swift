@@ -103,6 +103,16 @@ class FortunesViewController: BaseViewController {
         }
     }
     
+    private func setupUINavigationBar() {
+        if let navigationController = self.navigationController as? BaseNavigationController {
+            navigationController.navigationBar.barStyle = .black
+            navigationController.navigationBar.isTranslucent = false
+            navigationController.navigationBar.barTintColor = Color.specialYellow
+            navigationController.navigationBar.backgroundColor = Color.clear
+            navigationController.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "bg"), for: UIBarMetrics.default)
+        }
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -116,6 +126,7 @@ class FortunesViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.setupUINavigationBar()
         self.updateView()
     }
     
