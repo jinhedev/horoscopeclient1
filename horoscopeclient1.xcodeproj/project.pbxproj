@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E135AD420362E0200EC490F /* Fortunes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E135AD320362E0200EC490F /* Fortunes.storyboard */; };
+		1E19FBA3203B5B2800F8C8DD /* Fortunes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E19FBA2203B5B2800F8C8DD /* Fortunes.xcassets */; };
+		1E19FBA5203B5FB800F8C8DD /* FortunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E19FBA4203B5FB800F8C8DD /* FortunesViewController.swift */; };
+		1E19FBA7203BA3FA00F8C8DD /* NSDate+RelativeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */; };
 		C5B941D8202E6B9F000756B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D7202E6B9F000756B0 /* AppDelegate.swift */; };
 		C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D9202E6B9F000756B0 /* ViewController.swift */; };
 		C5B941DD202E6B9F000756B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B941DB202E6B9F000756B0 /* Main.storyboard */; };
@@ -99,6 +102,9 @@
 
 /* Begin PBXFileReference section */
 		1E135AD320362E0200EC490F /* Fortunes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fortunes.storyboard; sourceTree = "<group>"; };
+		1E19FBA2203B5B2800F8C8DD /* Fortunes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Fortunes.xcassets; sourceTree = "<group>"; };
+		1E19FBA4203B5FB800F8C8DD /* FortunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortunesViewController.swift; sourceTree = "<group>"; };
+		1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+RelativeDate.swift"; sourceTree = "<group>"; };
 		C5B941D4202E6B9F000756B0 /* horoscopeclient1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = horoscopeclient1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B941D7202E6B9F000756B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B941D9202E6B9F000756B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				1E135AD320362E0200EC490F /* Fortunes.storyboard */,
+				1E19FBA2203B5B2800F8C8DD /* Fortunes.xcassets */,
+				1E19FBA4203B5FB800F8C8DD /* FortunesViewController.swift */,
+				1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */,
 			);
 			path = Fortunes;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 		C5B9420B202E7278000756B0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */,
 				C5B9420C202E7278000756B0 /* RealmManager.swift */,
 				C5B9420D202E7278000756B0 /* WebServicesManager.swift */,
 			);
@@ -281,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				C5B9420F202E7278000756B0 /* WebSocket */,
-				C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */,
 				C5B94218202E7278000756B0 /* WebHandler */,
 			);
 			path = Vendor;
@@ -484,6 +493,7 @@
 				C5B941E2202E6B9F000756B0 /* LaunchScreen.storyboard in Resources */,
 				C5B941DF202E6B9F000756B0 /* Assets.xcassets in Resources */,
 				C5B9425F202E7931000756B0 /* Constellations.xcassets in Resources */,
+				1E19FBA3203B5B2800F8C8DD /* Fortunes.xcassets in Resources */,
 				C5B94265202E7931000756B0 /* Constellations.storyboard in Resources */,
 				C5B94206202E6BB4000756B0 /* Cartfile in Resources */,
 				C5B941DD202E6B9F000756B0 /* Main.storyboard in Resources */,
@@ -537,6 +547,7 @@
 				C5B9424C202E7719000756B0 /* WebViewController.swift in Sources */,
 				C5B94263202E7931000756B0 /* ContainerViewTwoController.swift in Sources */,
 				C5B94242202E770C000756B0 /* UIColor.swift in Sources */,
+				1E19FBA5203B5FB800F8C8DD /* FortunesViewController.swift in Sources */,
 				C5B9421F202E7279000756B0 /* WebServicesManager.swift in Sources */,
 				C5B94267202E7931000756B0 /* ContainerViewThreeController.swift in Sources */,
 				C5B9421C202E7279000756B0 /* Configs.swift in Sources */,
@@ -556,6 +567,7 @@
 				C5B9421B202E7279000756B0 /* Constants.swift in Sources */,
 				C5B94221202E7279000756B0 /* AppDataSocketConnector.m in Sources */,
 				C5B94250202E7719000756B0 /* BaseTableViewCell.swift in Sources */,
+				1E19FBA7203BA3FA00F8C8DD /* NSDate+RelativeDate.swift in Sources */,
 				C5B94260202E7931000756B0 /* DetailsViewController.swift in Sources */,
 				C5B9421E202E7279000756B0 /* RealmManager.swift in Sources */,
 				C5B94224202E7279000756B0 /* CYWebHandler.m in Sources */,

@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="672" y="29"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="3Cz-fj-hq5">
             <objects>
-                <tabBarController id="K1x-64-QtR" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BaseTabBarController" id="K1x-64-QtR" customClass="BaseTabBarController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mx2-6Q-2mb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

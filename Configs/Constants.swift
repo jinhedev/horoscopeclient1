@@ -12,6 +12,7 @@ let kOnboardingCompletion = "kOnboardingCompletion"
 let kSessionToken = "kSessionToken"
 let kDeviceToken = "kDeviceToken" // whether or not a deviceToken exists in Keychain
 let kApiKey = "kApiKey" // whether or not a apiKey exists in Keychain
+let kGiftDeliveryDate = "kGiftDeliveryDate"
 
 struct KeychainConfiguration {
     static let serviceName = "horoscopeclient"

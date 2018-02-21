@@ -12,6 +12,7 @@ class BaseTabBarController: UITabBarController {
 
     private func setupTabBar() {
         self.tabBar.isTranslucent = false
+        self.tabBar.barTintColor = Color.specialYellow
     }
 
     // MARK: - Lifecycle
