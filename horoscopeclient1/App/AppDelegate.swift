@@ -31,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             if !Configs.shared.hasDeviceToken() {
                 self.setupUNUserNotificationCenterDelegate(application)
+            } else {
+                let token = Configs.shared.deviceToken()
+                print(token)
+                let bundleID = Configs.shared.bundleId
+                let payload: Dictionary<String, Any> = ["token" : token, "keyID" : "MPGC2L77E3", "topic" : bundleID, "teamID" : "P35AQV2SNV", "url" : "https://www.google.com", "isProduction" : false]
+                appDataSocketConnector?.sendNormalRequest(withPack: payload, andServiceCode: "send_single_push_notification", andCustomerTag: 0)
             }
             self.setupAppDataSocketDelegate()
         } else {
