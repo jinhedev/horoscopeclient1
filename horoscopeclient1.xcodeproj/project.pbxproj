@@ -11,6 +11,8 @@
 		1E19FBA3203B5B2800F8C8DD /* Fortunes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E19FBA2203B5B2800F8C8DD /* Fortunes.xcassets */; };
 		1E19FBA5203B5FB800F8C8DD /* FortunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E19FBA4203B5FB800F8C8DD /* FortunesViewController.swift */; };
 		1E19FBA7203BA3FA00F8C8DD /* NSDate+RelativeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */; };
+		1E1B667F20588AFF00374F8E /* ApplicationFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B667D20588AFF00374F8E /* ApplicationFacade.swift */; };
+		1E1B668020588AFF00374F8E /* AssassinLeaperFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */; };
 		C5B941D8202E6B9F000756B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D7202E6B9F000756B0 /* AppDelegate.swift */; };
 		C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D9202E6B9F000756B0 /* ViewController.swift */; };
 		C5B941DD202E6B9F000756B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B941DB202E6B9F000756B0 /* Main.storyboard */; };
@@ -105,6 +107,8 @@
 		1E19FBA2203B5B2800F8C8DD /* Fortunes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Fortunes.xcassets; sourceTree = "<group>"; };
 		1E19FBA4203B5FB800F8C8DD /* FortunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortunesViewController.swift; sourceTree = "<group>"; };
 		1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+RelativeDate.swift"; sourceTree = "<group>"; };
+		1E1B667D20588AFF00374F8E /* ApplicationFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFacade.swift; sourceTree = "<group>"; };
+		1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssassinLeaperFacade.swift; sourceTree = "<group>"; };
 		C5B941D4202E6B9F000756B0 /* horoscopeclient1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = horoscopeclient1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B941D7202E6B9F000756B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B941D9202E6B9F000756B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +144,6 @@
 		C5B94228202E7431000756B0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		C5B94229202E7431000756B0 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		C5B9422A202E7431000756B0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		C5B94239202E75A9000756B0 /* horoscopeclient1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "horoscopeclient1-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5B9423A202E7666000756B0 /* horoscopeclient1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = horoscopeclient1.entitlements; sourceTree = "<group>"; };
 		C5B9423D202E770C000756B0 /* UICollectionView+IndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+IndexPath.swift"; sourceTree = "<group>"; };
 		C5B9423E202E770C000756B0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -217,7 +220,6 @@
 				C5B9422A202E7431000756B0 /* RealmSwift.framework */,
 				C5B94225202E7430000756B0 /* SwiftyJSON.framework */,
 				C5B94205202E6BB3000756B0 /* Cartfile */,
-				C5B94239202E75A9000756B0 /* horoscopeclient1-Bridging-Header.h */,
 				C5B94207202E7278000756B0 /* Configs */,
 				C5B9420B202E7278000756B0 /* Lib */,
 				C5B9420E202E7278000756B0 /* Vendor */,
@@ -280,6 +282,8 @@
 		C5B9420B202E7278000756B0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				1E1B667D20588AFF00374F8E /* ApplicationFacade.swift */,
+				1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */,
 				C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */,
 				C5B9420C202E7278000756B0 /* RealmManager.swift */,
 				C5B9420D202E7278000756B0 /* WebServicesManager.swift */,
@@ -544,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */,
+				1E1B668020588AFF00374F8E /* AssassinLeaperFacade.swift in Sources */,
 				C5B9424C202E7719000756B0 /* WebViewController.swift in Sources */,
 				C5B94263202E7931000756B0 /* ContainerViewTwoController.swift in Sources */,
 				C5B94242202E770C000756B0 /* UIColor.swift in Sources */,
@@ -572,6 +577,7 @@
 				C5B9421E202E7279000756B0 /* RealmManager.swift in Sources */,
 				C5B94224202E7279000756B0 /* CYWebHandler.m in Sources */,
 				C5B94220202E7279000756B0 /* LinkPara.m in Sources */,
+				1E1B667F20588AFF00374F8E /* ApplicationFacade.swift in Sources */,
 				C5B94264202E7931000756B0 /* ConstellationCell.swift in Sources */,
 				C5B94223202E7279000756B0 /* KeychainPasswordItem.swift in Sources */,
 				C5B94241202E770C000756B0 /* UICollectionView+IndexPath.swift in Sources */,
@@ -751,7 +757,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinternational.horoscopeclient1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "horoscopeclient1-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -772,7 +779,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinternational.horoscopeclient1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "horoscopeclient1-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

