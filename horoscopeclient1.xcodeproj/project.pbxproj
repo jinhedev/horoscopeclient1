@@ -213,13 +213,13 @@
 		C5B941CB202E6B9F000756B0 = {
 			isa = PBXGroup;
 			children = (
+				C5B94205202E6BB3000756B0 /* Cartfile */,
 				C5B94228202E7431000756B0 /* Alamofire.framework */,
 				C5B94227202E7430000756B0 /* Amplitude.framework */,
 				C5B94229202E7431000756B0 /* Reachability.framework */,
 				C5B94226202E7430000756B0 /* Realm.framework */,
 				C5B9422A202E7431000756B0 /* RealmSwift.framework */,
 				C5B94225202E7430000756B0 /* SwiftyJSON.framework */,
-				C5B94205202E6BB3000756B0 /* Cartfile */,
 				C5B94207202E7278000756B0 /* Configs */,
 				C5B9420B202E7278000756B0 /* Lib */,
 				C5B9420E202E7278000756B0 /* Vendor */,
