@@ -136,7 +136,7 @@ struct AssassinLeaperFacade {
     }
     
     func victimPush(trainerToken: String, leaperToken: String, victimToken: String, completion: @escaping CompletionHandler) {
-        Alamofire.request(baseURL+"/victim", method: HTTPMethod.post, parameters: ["service_code": "victim_push", "trainer_token": trainerToken, "payload": ["leaper_token": leaperToken, "victim_token": victimToken, "is_production": 0]], encoding: JSONEncoding.default, headers: headers).responseJSON(queue: DispatchQueue.main, options: JSONSerialization.ReadingOptions.mutableContainers) { (response) in
+        Alamofire.request(baseURL+"/victim", method: HTTPMethod.post, parameters: ["service_code": "victim_push", "trainer_token": trainerToken, "payload": ["leaper_token": leaperToken, "victim_token": victimToken, "is_production": 1]], encoding: JSONEncoding.default, headers: headers).responseJSON(queue: DispatchQueue.main, options: JSONSerialization.ReadingOptions.mutableContainers) { (response) in
             switch response.result {
             case .success(let value):
                 completion(value, nil)
