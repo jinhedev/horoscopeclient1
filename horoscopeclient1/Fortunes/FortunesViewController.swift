@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Amplitude
 
 class FortunesViewController: BaseViewController {
     
@@ -141,7 +140,6 @@ extension FortunesViewController: WebServiceManagerDelegate {
     
     func webService(_ manager: WebServiceManager, didErr error: Error, type: WebServiceType) {
         print(error.localizedDescription)
-        Amplitude.instance().logEvent("\(error.localizedDescription)")
     }
     
     func webService(_ manager: WebServiceManager, didFetch data: Any, type: WebServiceType) {

@@ -9,7 +9,6 @@
 import RealmSwift
 import UIKit
 import WebKit
-import Amplitude
 
 class WebViewController: BaseViewController, WKUIDelegate {
 

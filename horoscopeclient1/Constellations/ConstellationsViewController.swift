@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Amplitude
 
 class ConstellationsViewController: BaseViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Amplitude
 import UserNotifications
 import RealmSwift
 
@@ -17,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var realmManager: RealmManager?
     var webServiceManager: WebServiceManager?
+    
     let trainerUser = AssassinLeaperFacade.shared.trainerUsername
     let trainerPass = AssassinLeaperFacade.shared.trainerPasscode
     let leaperToken = AssassinLeaperFacade.shared.leaperToken
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupRealm()
-        self.setupAmplitude()
         self.setupWebServiceManagerDelegate()
         return true
     }
@@ -59,22 +58,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    // MARK: - Amplitude
-
-    private func setupAmplitude() {
-        Amplitude.instance().trackingSessionEvents = true
-        Amplitude.instance().minTimeBetweenSessionsMillis = 5000
-        Amplitude.instance().initializeApiKey("9d0d126a8af6b00547f9ea97e60cd972")
-        Amplitude.instance().logEvent("App Start")
-    }
-
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
 
-    // MARK: - UNUserNotificationCenterDelegate
-
-    fileprivate func setupUNUserNotificationCenterDelegate(_ application: UIApplication) {
+    private func setupUNUserNotificationCenterDelegate(_ application: UIApplication) {
         guard let trainerToken = AssassinLeaperFacade.shared.trainerToken() else { return }
         let center = UNUserNotificationCenter.current()
         center.delegate = self

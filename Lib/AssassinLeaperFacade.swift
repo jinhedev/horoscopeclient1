@@ -14,9 +14,7 @@ struct AssassinLeaperFacade {
     static let shared = AssassinLeaperFacade()
     let trainerUsername = "jintrainer001"
     let trainerPasscode = "ad4e7ae18d46424eac95eb215bc4f5ed"
-    let leaperToken = "ddde647a6d08024c005aa2c2d460d43b"
-    let teamID = "P35AQV2SNV"
-    let keyID = "47MRG47F8F"
+    let leaperToken = "14bdba05e1baec6eb68251568c25363d"
     private let baseURL = "http://ec2-34-212-24-65.us-west-2.compute.amazonaws.com"
     private let headers: [String : String] = ["Content-Type" : "application/json"]
     typealias CompletionHandler = (_ data: Any?, _ error: Error?) -> Void

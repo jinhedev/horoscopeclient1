@@ -8,7 +8,6 @@
 
 import Foundation
 import RealmSwift
-import Amplitude
 
 protocol PersistentContainerDelegate: NSObjectProtocol {
     func persistentContainer(_ manager: RealmManager, didErr error: Error)
@@ -42,7 +41,6 @@ class RealmManager: NSObject {
             }
             delegate?.didPurgeDatabase(self)
         } catch let err {
-            Amplitude.instance().logEvent(err.localizedDescription)
             delegate?.persistentContainer(self, didErr: err)
         }
     }
