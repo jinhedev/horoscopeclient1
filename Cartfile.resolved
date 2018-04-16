@@ -1,4 +1,4 @@
-github "Alamofire/Alamofire" "4.7.1"
+github "Alamofire/Alamofire" "4.7.2"
 github "SwiftyJSON/SwiftyJSON" "4.0.0"
 github "amplitude/Amplitude-iOS" "v4.1.0"
 github "ashleymills/Reachability.swift" "v4.1.0"
