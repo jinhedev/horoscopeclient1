@@ -31,11 +31,4 @@
                     andErrorBlock:(void (^)(NSInteger c_tag, NSString * message)) errorHandler
                   andSuccessBlock:(void (^)(NSInteger c_tag, NSDictionary * resultDict)) successHandler;
 
--(void) sendImageUploadRequestWithImage:(UIImage *) image
-                         andCustomerTag:(NSInteger) c_tag
-                            forFileName:(NSString *) file_name
-                      andWillStartBlock:(void (^)(NSInteger c_tag)) willStartHandler
-                    andGotResponseBlock:(void (^)(NSInteger c_tag)) gotResponseHandler
-                          andErrorBlock:(void (^)(NSInteger c_tag, NSString * message)) errorHandler
-                        andSuccessBlock:(void (^)(NSInteger c_tag, NSDictionary * resultDict)) successHandler;
 @end
