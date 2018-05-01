@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+@available(*, deprecated, message: "This class is deprecated, please use AssassinLeaperManager and AssassinLeaperConfigs instead.")
 struct AssassinLeaperFacade {
     
     static let shared = AssassinLeaperFacade()

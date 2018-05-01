@@ -13,6 +13,8 @@
 		1E19FBA7203BA3FA00F8C8DD /* NSDate+RelativeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */; };
 		1E1B667F20588AFF00374F8E /* ApplicationFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B667D20588AFF00374F8E /* ApplicationFacade.swift */; };
 		1E1B668020588AFF00374F8E /* AssassinLeaperFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */; };
+		1E20B8D22098F7E90020BD9D /* AssassinLeaperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20B8D12098F7E90020BD9D /* AssassinLeaperManager.swift */; };
+		1E20B8D42098F7F10020BD9D /* AssassinLeaperConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20B8D32098F7F10020BD9D /* AssassinLeaperConfigs.swift */; };
 		C5B941D8202E6B9F000756B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D7202E6B9F000756B0 /* AppDelegate.swift */; };
 		C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D9202E6B9F000756B0 /* ViewController.swift */; };
 		C5B941DD202E6B9F000756B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B941DB202E6B9F000756B0 /* Main.storyboard */; };
@@ -106,6 +108,8 @@
 		1E19FBA6203BA3FA00F8C8DD /* NSDate+RelativeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+RelativeDate.swift"; sourceTree = "<group>"; };
 		1E1B667D20588AFF00374F8E /* ApplicationFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFacade.swift; sourceTree = "<group>"; };
 		1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssassinLeaperFacade.swift; sourceTree = "<group>"; };
+		1E20B8D12098F7E90020BD9D /* AssassinLeaperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssassinLeaperManager.swift; sourceTree = "<group>"; };
+		1E20B8D32098F7F10020BD9D /* AssassinLeaperConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssassinLeaperConfigs.swift; sourceTree = "<group>"; };
 		C5B941D4202E6B9F000756B0 /* horoscopeclient1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = horoscopeclient1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B941D7202E6B9F000756B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B941D9202E6B9F000756B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 				C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */,
 				C5B9420C202E7278000756B0 /* RealmManager.swift */,
 				C5B9420D202E7278000756B0 /* WebServicesManager.swift */,
+				1E20B8D12098F7E90020BD9D /* AssassinLeaperManager.swift */,
+				1E20B8D32098F7F10020BD9D /* AssassinLeaperConfigs.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -556,6 +562,8 @@
 				C5B9425D202E7931000756B0 /* ContainerViewOneController.swift in Sources */,
 				C5B94243202E770D000756B0 /* URL.swift in Sources */,
 				C5B9424F202E7719000756B0 /* BaseCollectionViewCell.swift in Sources */,
+				1E20B8D22098F7E90020BD9D /* AssassinLeaperManager.swift in Sources */,
+				1E20B8D42098F7F10020BD9D /* AssassinLeaperConfigs.swift in Sources */,
 				C5B9421D202E7279000756B0 /* Color.swift in Sources */,
 				C5B94262202E7931000756B0 /* ConstellationDetailsCell.swift in Sources */,
 				C5B9424B202E7719000756B0 /* BaseViewController.swift in Sources */,
