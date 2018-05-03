@@ -6,7 +6,7 @@
 //  Copyright © 2018 od-international. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 import Crashlytics
 
