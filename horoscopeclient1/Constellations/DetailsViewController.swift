@@ -14,7 +14,7 @@ class DetailsViewController: BaseViewController {
     static let storyboard_id = String(describing: DetailsViewController.self)
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var constellationImageView: UIImageView!
+    @IBOutlet weak var constellationImageView: SFImageView!
     @IBOutlet weak var constellationTitleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -27,12 +27,6 @@ class DetailsViewController: BaseViewController {
     private func setupHeaderView() {
         self.headerView.backgroundColor = Color.specialYellow
         guard let constellation = self.selectedConstellation else { return }
-        self.constellationImageView.backgroundColor = Color.white
-        self.constellationImageView.layer.cornerRadius = 40
-        self.constellationImageView.layer.borderColor = Color.white.cgColor
-        self.constellationImageView.layer.borderWidth = 5
-        self.constellationImageView.contentMode = .scaleAspectFit
-        self.constellationImageView.clipsToBounds = true
         self.constellationImageView.image = UIImage(named: constellation.image_name)
         self.constellationTitleLabel.text = constellation.name
         self.subtitleLabel.text = ""

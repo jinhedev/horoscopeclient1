@@ -18,7 +18,7 @@ class ConstellationCell: BaseCollectionViewCell {
     let screenWidth = UIScreen.main.bounds.width
     static let cell_id = String(describing: ConstellationCell.self)
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: SFImageView!
     @IBOutlet weak var titleLabel: UILabel!
 
     private func updateCell() {
@@ -30,7 +30,7 @@ class ConstellationCell: BaseCollectionViewCell {
     private func setupCell() {
         self.backgroundColor = Color.clear
         self.containerView.backgroundColor = Color.white
-        self.imageView.backgroundColor = Color.clear
+//        self.imageView.backgroundColor = Color.clear
         self.layer.cornerRadius = 8
     }
 
