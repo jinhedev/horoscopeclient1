@@ -18,6 +18,7 @@
 		1E1B668020588AFF00374F8E /* AssassinLeaperFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */; };
 		1E20B8D22098F7E90020BD9D /* AssassinLeaperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20B8D12098F7E90020BD9D /* AssassinLeaperManager.swift */; };
 		1E20B8D42098F7F10020BD9D /* AssassinLeaperConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20B8D32098F7F10020BD9D /* AssassinLeaperConfigs.swift */; };
+		1E63773F209D055B007940E6 /* SFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63773E209D055B007940E6 /* SFImageView.swift */; };
 		83742800E88117D942FBF0E2 /* Pods_horoscopeclient1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF01FB342B0A82E3B3CD759 /* Pods_horoscopeclient1Tests.framework */; };
 		C5B941D8202E6B9F000756B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D7202E6B9F000756B0 /* AppDelegate.swift */; };
 		C5B941DA202E6B9F000756B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B941D9202E6B9F000756B0 /* ViewController.swift */; };
@@ -121,6 +122,7 @@
 		1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssassinLeaperFacade.swift; sourceTree = "<group>"; };
 		1E20B8D12098F7E90020BD9D /* AssassinLeaperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssassinLeaperManager.swift; sourceTree = "<group>"; };
 		1E20B8D32098F7F10020BD9D /* AssassinLeaperConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssassinLeaperConfigs.swift; sourceTree = "<group>"; };
+		1E63773E209D055B007940E6 /* SFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFImageView.swift; sourceTree = "<group>"; };
 		58C4E9E267C1BD6013008311 /* Pods_horoscopeclient1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_horoscopeclient1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09413030953ADF0FAF92A12 /* Pods_horoscopeclient1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_horoscopeclient1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B941D4202E6B9F000756B0 /* horoscopeclient1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = horoscopeclient1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +230,14 @@
 			path = Fortunes;
 			sourceTree = "<group>";
 		};
+		1E63773D209D054F007940E6 /* SFDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				1E63773E209D055B007940E6 /* SFImageView.swift */,
+			);
+			path = SFDesignables;
+			sourceTree = "<group>";
+		};
 		8618107E0F8698CEC6A73649 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +321,7 @@
 		C5B9420B202E7278000756B0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				1E63773D209D054F007940E6 /* SFDesignables */,
 				1E1B667D20588AFF00374F8E /* ApplicationFacade.swift */,
 				1E1B667E20588AFF00374F8E /* AssassinLeaperFacade.swift */,
 				C5B94217202E7278000756B0 /* KeychainPasswordItem.swift */,
@@ -699,6 +710,7 @@
 				1E1B667F20588AFF00374F8E /* ApplicationFacade.swift in Sources */,
 				C5B94264202E7931000756B0 /* ConstellationCell.swift in Sources */,
 				C5B94223202E7279000756B0 /* KeychainPasswordItem.swift in Sources */,
+				1E63773F209D055B007940E6 /* SFImageView.swift in Sources */,
 				C5B94241202E770C000756B0 /* UICollectionView+IndexPath.swift in Sources */,
 				1E101F85209BB8C0009D3D6C /* Answers+Utilities.swift in Sources */,
 			);

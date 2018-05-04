@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vxQ-Fc-Qe0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vxQ-Fc-Qe0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Constellations View Controller-->
         <scene sceneID="r0L-Q3-mpa">
@@ -115,7 +110,7 @@
         <!--Details View Controller-->
         <scene sceneID="BrB-FJ-qTb">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" id="1MY-CE-4xT" customClass="DetailsViewController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" hidesBottomBarWhenPushed="YES" id="1MY-CE-4xT" customClass="DetailsViewController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H4g-jx-8KL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,19 +186,19 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68f-27-JHb">
-                                <rect key="frame" x="0.0" y="165" width="375" height="389"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="438"/>
                                 <connections>
                                     <segue destination="aKx-H5-RnN" kind="embed" identifier="DetailsViewControllerToContainerViewOneController" id="8l0-2z-n0o"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-8f-5tj">
-                                <rect key="frame" x="0.0" y="165" width="375" height="389"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="438"/>
                                 <connections>
                                     <segue destination="scQ-mm-5Ph" kind="embed" identifier="DetailsViewControllerToContainerViewTwoController" id="VCF-5x-uuv"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDu-W2-r0g">
-                                <rect key="frame" x="0.0" y="165" width="375" height="389"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="438"/>
                                 <connections>
                                     <segue destination="F0z-It-YEl" kind="embed" identifier="DetailsViewControllerToContainerViewThreeController" id="Acd-Oi-dWd"/>
                                 </connections>
@@ -279,11 +274,11 @@
             <objects>
                 <viewController storyboardIdentifier="ContainerViewOneController" id="aKx-H5-RnN" customClass="ContainerViewOneController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jKa-J2-PSR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="63x-HM-1GS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -309,11 +304,11 @@
             <objects>
                 <viewController storyboardIdentifier="ContainerViewTwoController" id="scQ-mm-5Ph" customClass="ContainerViewTwoController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0PQ-kC-c9q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vuG-El-b2Q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -339,11 +334,11 @@
             <objects>
                 <viewController storyboardIdentifier="ContainerViewThreeController" id="F0z-It-YEl" customClass="ContainerViewThreeController" customModule="horoscopeclient1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRK-vZ-ria">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-6C-Azt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
